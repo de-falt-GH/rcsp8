@@ -1,0 +1,22 @@
+server.port: 8082
+eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres-db3:5432/rcsp8-db3
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        default_schema: public
+        id:
+          new_generator_mappings: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+hero.service.url: http://hero-service:8080
